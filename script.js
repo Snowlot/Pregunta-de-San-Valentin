@@ -3,22 +3,22 @@
 // Function to handle button click events
 function selectOption(option) {
     // Check which option was clicked
-    if (option === 'yes') {
+    if (option === 'Si') {
         // Flash rainbow colors
         flashRainbowColors(function() {
             document.getElementById('question').style.display = 'none'; // Hide the question
-            displayCatHeart(); // Display the cat-heart.gif
+            JadeNepetaKiss(); // Display the JadeNepetaKiss.gif
         });
-    } else if (option === 'no') {
+    } else if (option === 'No') {
         // Change text on the "No" button to "You sure?"
-        document.getElementById('no-button').innerText = 'You sure?'; 
-        // Increase font size of "Yes" button
-        var yesButton = document.getElementById('yes-button');
-        var currentFontSize = window.getComputedStyle(yesButton).getPropertyValue('font-size');
+        document.getElementById('No-button').innerText = 'You sure?'; 
+        // Increase font size of "Si" button
+        var SiButton = document.getElementById('Si-button');
+        var currentFontSize = window.getComputedStyle(SiButton).getPropertyValue('font-size');
         var newSize = parseFloat(currentFontSize) * 2; // Increase font size by  * 2px
-        yesButton.style.fontSize = newSize + 'px';
+        SiButton.style.fontSize = newSize + 'px';
     } else {
-        // If neither "Yes" nor "No" was clicked, show an alert message
+        // If neither "Si" nor "No" was clicked, show an alert message
         alert('Invalid option!');
     }
 }
